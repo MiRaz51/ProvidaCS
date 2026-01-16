@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Estamos en mantenimiento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="left">
+      <header class="brand">
+        <div class="brand-logo">A</div>
+        <span class="brand-name">Tu Aplicación</span>
+      </header>
+
+      <div class="headline">
+        <div class="headline-eyebrow">Error 404 · Página no encontrada</div>
+        <h1 class="headline-title">Estamos en mantenimiento.</h1>
+        <p class="headline-sub">
+          Mientras terminamos de ajustar las piezas, puedes volver al inicio o entretenerte un momento con el mini‑juego.
+        </p>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" onclick="window.location.href='/'">
+          <span class="btn-primary-icon">↩</span>
+          <span>Volver al inicio</span>
+        </button>
+
+        <button class="btn-ghost" id="btnRestartGame">
+          <span>⟳</span>
+          <span>Reiniciar juego</span>
+        </button>
+      </div>
+
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Estado: mantenimiento en curso</span>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="illustration-card">
+        <div class="illustration-header">
+          <span>Módulo de servicio · M-04</span>
+          <span class="tag">
+            <span class="tag-dot"></span>
+            <span>Equipo en reparación</span>
+          </span>
+        </div>
+        <div class="mechanic-scene">
+          <div class="gear gear-spin">
+            <div class="gear-center"></div>
+          </div>
+
+          <div class="mechanic-char">
+            <div>
+              <div class="mechanic-body">
+                <div class="mechanic-face">
+                  <div class="mechanic-hat"></div>
+                  <div class="mechanic-eye"></div>
+                  <div class="mechanic-smile"></div>
+                </div>
+                <div class="mechanic-tool tool-spark">🔧</div>
+              </div>
+              <div class="mechanic-shadow"></div>
+            </div>
+          </div>
+
+          <div class="ground"></div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-header">
+          <div class="game-title">
+            <span>Mini‑juego: Salta los obstáculos</span>
+          </div>
+          <span class="badge-soft">Modo mantenimiento</span>
+        </div>
+
+        <div class="game-meta">
+          <span><span class="dot-soft"></span> Juega mientras esperamos</span>
+          <span>Evita los bloques lila y suma puntos</span>
+        </div>
+
+        <div class="game-canvas-wrap">
+          <canvas id="runnerGame" width="420" height="140"></canvas>
+        </div>
+
+        <div class="game-help">
+          <span>
+            <span class="kbd">Barra espaciadora</span> o clic en el juego para saltar
+          </span>
+          <span class="game-score" id="scoreLabel">Puntuación: 0</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
